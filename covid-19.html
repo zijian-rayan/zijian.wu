@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+	        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Junny : Home</title>
+        <link rel="icon" type="image/icon" href="assets/images/tabicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700,700i|Josefin+Sans:700" rel="stylesheet">
+        <link href="assets/css/main.css" rel="stylesheet">
+        <link rel="icon" href="assets/images/logo.png">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+    <script src="echarts.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+	<div id="index">                                           <!-- Index starts here -->
+            <div class="container main">
+                <div class="row home">
+                    <div id = "index_left" class="col-md-6 left">
+                        <a href="http://wuzijian.cf"><img class="img-responsive img-rabbit1" src="cov.jpg"></a>
+                    </div>
+                    <div id = "index_right" class="col-md-6 text-center right">
+                        <div class="logo">
+                            <h2>法国的疫情情况</h2>
+                        </div>
+                        <p class="home-description">
+                            <br>
+							
+							做的比较简陋，还请见谅。我将在法国时间下午六点左右更新数据。 </p>
+					
+                        </p>
+						                     </div>      
+                    </div>
+                </div>
+            </div>
+	</div> 
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        option = {
+			xAxis: {
+				type: 'category',
+				data: ['02/26', '02/27', '02/28', '02/29', '03/01', '03/02', '03/03', '03/04'],
+				name: '日期'
+			},
+			yAxis: {
+				type: 'value',
+				name: '确诊人数'
+			},
+			series: [{
+				name: '确诊人数',
+				data: [0, 4, 20, 42, 100, 130, 191, 212],
+				type: 'bar'
+				//
+			}]
+		};
+		
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+	 <div id="main2" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart2 = echarts.init(document.getElementById('main2'));
+
+        // 指定图表的配置项和数据
+        option2 = {
+			xAxis: {
+				type: 'category',
+				data: ['02/26', '02/27', '02/28', '02/29', '03/01', '03/02', '03/03', '03/04'],
+				name: '日期'
+			},
+			yAxis: {
+				type: 'value',
+				name: '确诊人数'
+			},
+			series: [{
+				name: '确诊人数',
+				data: [0, 4, 20, 42, 100, 130, 191, 212],
+				type: 'line'
+				//
+			}]
+		};
+		
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart2.setOption(option2);
+    </script>
+	
+</body>
+</html>
