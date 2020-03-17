@@ -25,7 +25,7 @@
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 
-    <div id="main" style="width: 600px;height:400px;"></div>
+    <div id="main" style="width: 400px;height:400px;"></div>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
@@ -34,7 +34,7 @@
         option = {
 			xAxis: {
 				type: 'category',
-				data: ['02/26', '02/27', '02/28', '02/29', '03/01', '03/02', '03/03', '03/04'],
+				data: ['02/25', '02/26', '02/27', '02/28', '02/29', '03/01', '03/02', '03/03', '03/04', '03/05', '03/06', '03/07', '03/08', '03/09', '03/10', '03/11', '03/12'],
 				name: '日期'
 			},
 			yAxis: {
@@ -43,7 +43,7 @@
 			},
 			series: [{
 				name: '确诊人数',
-				data: [0, 4, 20, 42, 100, 130, 191, 212],
+				data: [0, 4, 16, 22, 58, 30, 61, 21, 73, 138, 190, 336, 177, 286, 372, 497, 595],
 				type: 'bar'
 				//
 			}]
@@ -53,7 +53,7 @@
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
     </script>
-	 <div id="main2" style="width: 600px;height:400px;"></div>
+	 <div id="main2" style="width: 400px;height:400px;"></div>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart2 = echarts.init(document.getElementById('main2'));
@@ -62,7 +62,7 @@
         option2 = {
 			xAxis: {
 				type: 'category',
-				data: ['02/26', '02/27', '02/28', '02/29', '03/01', '03/02', '03/03', '03/04'],
+				data: ['02/25', '02/26', '02/27', '02/28', '02/29', '03/01', '03/02', '03/03', '03/04', '03/05', '03/06', '03/07', '03/08', '03/09', '03/10', '03/11', '03/12'],
 				name: '日期'
 			},
 			yAxis: {
@@ -71,7 +71,7 @@
 			},
 			series: [{
 				name: '确诊人数',
-				data: [0, 4, 20, 42, 100, 130, 191, 212],
+				data: [0, 4, 20, 42, 100, 130, 191, 212, 285, 423, 613, 949, 1126, 1412, 1784, 2281, 2876],
 				type: 'line'
 				//
 			}]
